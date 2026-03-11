@@ -12,7 +12,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanma - All in One</title>
+    <title>Gallry-web-gallery-info</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes backgroundAnimation {
@@ -43,6 +43,8 @@
             <button class="text-3xl" onclick="toggleMenu()">&times;</button>
         </li>
         <p><img src="graphaset__1_-removebg-preview.png" alt="logo" class="md:hidden text 2x1 p-2 px-4 top-0 left-0 w-[150px] fixed" ></p>
+        <hr class="border-t-4 border-purple-500 max-w-full w-60 my-2 rounded-full md:hidden ">
+        
         <li><a href="#home" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">HOME</a></li>
         <li><a href="#about" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">ABOUT</a></li>
         <li><a href="#gallery" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">GALLERY</a></li>
@@ -114,7 +116,7 @@
                 <div class="flex-1 w-full">
                     <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-h-[600px] overflow-y-auto p-4 bg-orange-100/50 rounded-xl">
                         </div>
-                    <div id="pagination" class="flex justify-center gap-2 mt-6"></div>
+                    <div id="pagination" class="flex flex-wrap justify-center gap-2 mt-8 px-4"></div>
                 </div>
             </div>
         </div>

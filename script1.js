@@ -5,7 +5,7 @@ const gallery = document.getElementById('gallery-grid');
 const paginationContainer = document.getElementById('pagination');
 
 const fotoPerHalaman = 12;
-const totalSemuaFoto = 189;
+const totalSemuaFoto = 188;
 const totalHalaman = Math.ceil(totalSemuaFoto / fotoPerHalaman);
 
 function tampilkanHalaman(halaman) {
@@ -38,16 +38,32 @@ function tampilkanHalaman(halaman) {
 
 function buatTombol() {
     paginationContainer.innerHTML = "";
-
     for (let i = 1; i <= totalHalaman; i++) {
         const btn = document.createElement('button');
         btn.innerText = i;
-        btn.className = 'page-btn';
-        btn.onclick = () => tampilkanHalaman(i);
+        btn.className = 'page-btn w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md bg-white hover:bg-purple-600 hover:text-white transition-all text-sm font-medium shadow-sm';
+        btn.onclick = () => {
+            tampilkanHalaman(i);
+            window.scrollTo({ top: gallery.offsetTop - 100, behavior: 'smooth' });
+        };
         paginationContainer.appendChild(btn);
     }
 }
 
+function updateButtons(halamanAktif) {
+    const buttons = document.querySelectorAll('.page-btn');
+    buttons.forEach((btn, index) => {
+        if (index + 1 === halamanAktif) {
+            // Warna saat aktif: Biru
+            btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+            btn.classList.remove('bg-white', 'text-black');
+        } else {
+            // Warna saat tidak aktif: Putih
+            btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+            btn.classList.add('bg-white', 'text-black');
+        }
+    });
+}
 function updateButtons(halamanAktif) {
     const buttons = document.querySelectorAll('.page-btn');
     buttons.forEach((btn, index) => {
