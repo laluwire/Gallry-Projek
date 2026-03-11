@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XQQRY4C5QX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XQQRY4C5QX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanma - All in One</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-color: #8c00ff; }
+            50% { background-color: rgb(212, 4, 205); }
+            100% { background-color: rgb(142, 86, 255); }
+        }
+        .nav-link-hover:hover {
+            animation: backgroundAnimation 0.9s infinite;
+        }
+        body {
+            background-image: url("Minecraft_\ Play\ with\ Game\ Pass\ _\ Xbox.jfif");
+            background-size: cover;      
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="m-0 font-sans text-center">
+
+<nav class="fixed top-0 left-0 w-full h-[60px] bg-[#424242] text-white flex items-center px-5 z-[1001] shadow-lg">
+    <button class="md:hidden text-2xl cursor-pointer p-2" onclick="toggleMenu()">☰</button>
+    <img src="graphaset__1_-removebg-preview.png" alt="logo" class="w-[100px] ml-2 ">
+
+    <ul id="nav-links" class="fixed top-0 left-0 h-screen w-[250px] bg-[#333] flex flex-col items-start gap-4 p-10 transition-transform duration-300 ease-in-out -translate-x-full md:relative md:h-auto md:w-auto md:bg-transparent md:flex-row md:translate-x-0 md:p-0 md:ml-auto z-[1002]">    
+        <li class="md:hidden self-end mb-5">
+            <button class="text-3xl" onclick="toggleMenu()">&times;</button>
+        </li>
+        <p><img src="graphaset__1_-removebg-preview.png" alt="logo" class="md:hidden text 2x1 p-2 px-4 top-0 left-0 w-[150px] fixed" ></p>
+        <li><a href="#home" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">HOME</a></li>
+        <li><a href="#about" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">ABOUT</a></li>
+        <li><a href="#gallery" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">GALLERY</a></li>
+        <li><a href="#contact" class="block py-2 px-4 bg-[#393939] rounded font-bold nav-link-hover" onclick="toggleMenu()">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div id="nav-overlay" class="hidden fixed inset-0 bg-black/60 z-[1000] md:hidden" onclick="toggleMenu()"></div>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4">
+        <div class="w-full max-w-6xl bg-gradient-to-t from-[#5f9ead] via-white to-white rounded-[50px] p-10 shadow-2xl">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-left flex-1">
+                    <h1 class="text-4xl font-bold mb-4">SELAMAT DATANG DI "Gallery"</h1>
+                    <h2 class="text-xl">We didn’t realize we were making memories, we just knew we were having fun.</h2>
+                </div>
+                <img src="Dr.Watermark_Gemini_1773180422169-removebg-preview.png" alt="hero" class="w-[350px] rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+<section id="about" class="py-20 bg-white/90 backdrop-blur-md mx-4 my-10 rounded-[40px] shadow-lg">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10 text-purple-800">Mengenal Sanma Gallery</h2>
+        
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="text-left space-y-4">
+                <p class="text-gray-700 leading-relaxed">
+                    <strong>Sanma Gallery</strong> adalah platform portfolio digital yang menggabungkan estetika visual dengan teknologi web modern. Website ini dibuat untuk mendokumentasikan perjalanan kreatif saya dalam dunia desain dan programming.
+                </p>
+
+                <div id="more-text" class="hidden text-gray-700 leading-relaxed space-y-4 border-t pt-4 border-purple-200">
+                    <p>
+                        <strong>Sanma Gallery</strong> adalah sebuah website untuk menyimpan foto kenangan agar bisa berbagi momen lama yamg telah di alami bersama kawan tanpa perlu mengirim 1 per 1 foto di whatsApp, hanya perlu buka situs dan kamu bisa melihat semuanya di sini.
+                    </p>
+                    <p>
+                        website ini juga bisa diperbarui jika ada dukukung dari kawan-kawan sekalian, lalu jika ada kritik dan sarannya atau jika menemukan bug bisa di sampaikan melalui<a href="#contact" class="block py-2 px-4 text-blue-600" onclick="toggleMenu()"><strong>Contact ini</strong></a>
+                               
+
+                    </p>
+                </div>
+
+                <button onclick="toggleAboutDetail()" id="btn-more" class="text-purple-600 font-bold hover:underline focus:outline-none">
+                    Selengkapnya...
+                </button>
+
+                <ul class="space-y-2 text-gray-600 pt-4">
+                    <li class="flex items-center">✅ <span class="ml-2">Manajemen 180+ foto secara dinamis</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Antarmuka responsif dengan Tailwind CSS</span></li>
+                    <li class="flex items-center">✅ <span class="ml-2">Pengalaman user yang interaktif</span></li>
+                </ul>
+            </div>
+            
+            <div class="bg-purple-100 p-8 rounded-2xl border-2 border-dashed border-purple-400">
+                <h4 class="font-bold text-purple-900 mb-2">Tujuan Proyek</h4>
+                <p class="text-sm text-purple-800 italic">
+                    "Website ini dikembangkan untuk membuktikan bahwa pengelolaan konten visual yang besar dapat dikemas dalam satu halaman yang cepat, rapi, dan tetap estetik."
+                    <br> <br>
+                    "Tujuan proyek ini dibuat hanya untuk memahami lebih dalam pembuatan website oleh developer dan jg bisa bermanfaat untuk orang lain"
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="gallery" class="py-20 px-5">
+        <div class="max-w-6x4 mx-auto bg-white/80 p-8 rounded-[30px] border-2 border-purple-600 shadow-xl">
+            <h2 class="text-3xl font-bold mb-10">Gallery Konten</h2>
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                <img src="Dr.Watermark_Gemini_1773178503980.jpg" alt="side" class="w-full lg:w-[300px] rounded-2xl shadow-md">
+                <div class="flex-1 w-full">
+                    <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-h-[600px] overflow-y-auto p-4 bg-orange-100/50 rounded-xl">
+                        </div>
+                    <div id="pagination" class="flex justify-center gap-2 mt-6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-purple-300/90 mx-4 rounded-[50px] mb-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-10 text-slate-900">Hubungi Kami</h2>
+            <div class="flex flex-col lg:flex-row gap-12 bg-white p-10 rounded-3xl shadow-lg">
+                <div class="lg:w-1/3 text-left space-y-6">
+                    <h4 class="font-bold text-xl text-blue-600 underline">Informasi Kontak</h4>
+                    <p>📍  Tidak ada alamat</p>
+                    <p>📞 +62-813-3946-3922</p>
+                    <p>📧 lalusanma4@gmail.com</p>
+                </div>
+                <form class="lg:w-2/3 grid gap-4 text-left">
+                    <input type="text" placeholder="Nama Lengkap" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    <input type="email" placeholder="Email" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    <textarea placeholder="Pesan Anda" rows="4" class="p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    <button class="bg-blue-600 text-white py-3 px-8 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-900 text-white py-10 mt-20">
+        <p>&copy; 2026 BySanma - Di buat sanma01</p>
+    </footer>
+
+    <div id="lightbox" class="hidden fixed inset-0 z-[2000] bg-black/95 flex items-center justify-center p-4">
+        <span class="close absolute top-5 right-10 text-white text-5xl font-bold cursor-pointer" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl">
+    </div>
+
+    <script src="script1.js"></script>
+<div id="contact-popup" class="hidden fixed inset-0 z-[3000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="bg-white p-8 rounded-[30px] shadow-2xl z-[3001] text-center max-w-sm transform transition-all">
+        <div class="text-5xl mb-4">🚀</div>
+        <h3 class="text-2xl font-bold text-purple-800 mb-2">Pesan Tidak Terkirim!</h3>
+        <p class="text-gray-600 mb-6">Oops, oh iya website ini tidak mempunyai database utk menerima pesan silahkan hubungi melalui whatsApp dan email. </p>
+        <button onclick="closeContactPopup()" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold hover:bg-purple-700 transition">
+            Siap, Oke!
+        </button>
+    </div>
+</div>
+</body>
+</html>
